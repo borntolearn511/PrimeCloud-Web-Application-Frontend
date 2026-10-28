@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PrimeCloud.io</title>
+    <style>
+        .text {
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        .cart1 {
+            background-color: #19294a;
+            border-radius: 50px;
+            width: 70%;
+            height: 350px;
+        }
+
+        .cart2 {
+            background-color: #19294a;
+            border-radius: 50px;
+            width: 70%;
+            height: 1000px;
+            font-size: 20px;
+        }
+
+        .h-text {
+            padding-left: 50px;
+            color: rgb(204, 204, 204);
+        }
+
+        .card-al1 {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .card-al2 {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .Card {
+            align-items: center;
+        }
+
+        .price-description {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .service-price {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        form .info input {
+            padding: 10px;
+            font-size: 17px;
+            width: 300px;
+            outline: none;
+
+        }
+
+        .info input:focus,
+        .info input:valid {
+            border-color: #2563EB;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .Pay h2 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .submit0 {
+            padding: 50px;
+        }
+
+        .Pay button {
+            padding: 10px;
+            width: 300px;
+            height: 50px;
+            background-color: #4079f4;
+            border: 0px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .link-btn {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #2563EB;
+        }
+
+        .line1 {
+            border-top: 2px dashed #bdbdbd;
+            margin: 20px 0;
+            margin-bottom: 5px;
+        }
+
+        .line2 {
+            border-top: 2px solid #bdbdbd;
+            padding-bottom: 5px;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        .line3 {
+            border-top: 2px solid #bdbdbd;
+            padding-bottom: 5px;
+            padding-top: 0px;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        .opt:hover {
+            cursor: pointer;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="Menu">
+        <div class="company-name">
+            <img class="logo" src="/Resource/ChatGPT Image Jul 2, 2026, 08_42_33 PM.png" height="100px" alt="Logo">
+            <h1>PrimeCloud</h1>
+        </div>
+        <nav>
+            <div>
+                <a href="/Home.html">Home</a>
+                <a href="/Feature.html">Features</a>
+                <a href="/Service.html">Service Plan</a>
+                <a href="/Check_Out_Default.html">Check Out</a>
+                <a href="/About_Us.html">About Us</a>
+                <button class="btn-sm">Login</button>
+            </div>
+        </nav>
+    </header>
+    <div class="text">
+        <p><strong>Checkout Form</strong></p>
+    </div>
+    <div class="Card">
+        <div class="card-al1">
+            <div class="cart1">
+                <div class="cart-element">
+                    <div class="h-text">
+                        <h2>Price Summary</h2>
+                    </div>
+                    <div class="line3"></div>
+                    <div class="price-description">
+                        <div class="service-price">
+                            <div class="service">
+                                <span>N/A</span>
+                            </div>
+                            <div class="price">
+                                <span><strong>$0</strong></span>
+                            </div>
+                        </div>
+                        <div class="line1"></div>
+                        <div class="service-price">
+                            <div class="service">
+                                <span>Total</span>
+                            </div>
+                            <div class="price">
+                                <span><strong>$0/month</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-al2">
+            <div class="cart2">
+                <div class="cart-element">
+                    <div class="h-text">
+                        <h2>Customer Information</h2>
+                    </div>
+                    <div class="line2"></div>
+                    <!-- Wrapper -->
+                    <div class="label-input">
+                        <div class="container1">
+                            <form class="Info" action="">
+                                <div class="info">
+                                    <label for="Username">Full Name</label> <br>
+                                    <input type="text" placeholder="Elon Musk" required>
+                                </div>
+                                <div class="info">
+                                    <label for="Email">Email Address</label> <br>
+                                    <input type="text" placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="info">
+                                    <label for="Company">Company Name</label> <br>
+                                    <input type="text" placeholder="SpaceX">
+                                </div>
+                                <div class="info">
+                                    <label for="Phone">Phone Number</label> <br>
+                                    <input type="text" placeholder="Phone Number">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="container2">
+                            <form class="Pay" action="payment">
+                                <div class="label">
+                                    <label for="Payment Method">
+                                        <h2>Payment Method</h2>
+                                    </label>
+                                </div>
+                                <br>
+                                <div class="input-rad">
+                                    <input type="radio" placeholder="" name="method" class="opt">ABA Pay <br> <br>
+                                    <input type="radio" placeholder="" name="method" class="opt">ACLEDA <br> <br>
+                                    <input type="radio" placeholder="" name="method" class="opt">KHQR <br> <br>
+                                    <input type="radio" placeholder="" name="method" class="opt">Wing
+                                </div>
+                                <div class="submit0">
+                                    <button class="submi-tbtn" type="submit"><a class="link-btn"
+                                            href="#">Submit</a></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 PrimeCloud</p>
+    </footer>
+</body>
+
+</html>

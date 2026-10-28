@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PrimeCloud.io</title>
+    <style>
+        /* សម្រាប់ទំព័រដែលកំពុងបើកមើល (Service Plan) ឱ្យវាឡើងពណ៌សស្រាប់តែម្តង */
+        .nav-links a.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Modern Reset & Base Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0b111e;
+            color: #ffffff;
+        }
+
+        /* Main Content Grid */
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            align-items: center;
+        }
+
+        .company-name h1 {
+            padding-top: 20px;
+        }
+
+        /* Pricing Cards Transformation */
+        .plan-card {
+            /* ប្រើពណ៌ Gradient ពីខៀវក្រម៉ៅ ទៅខៀវចាស់ (គ្មានពណ៌សទាល់តែសោះ) */
+            background: linear-gradient(180deg, #16223f 0%, #0f172a 100%);
+
+            /* ខ្សែបន្ទាត់ព័ទ្ធជុំវិញស្តើងៗ ពណ៌ខៀវស្រាល ដើម្បីឱ្យមើលឃើញរាងប្រអប់ច្បាស់ */
+            border: 1px solid #1e3a8a;
+            border-radius: 24px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 480px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+        }
+
+        /* ពេលយកម៉ៅស៍ដាក់ពីលើ ឱ្យវាភាយពន្លឺខៀវ និងអណ្តែតឡើង */
+        .plan-card:hover {
+            transform: translateY(-8px);
+            border-color: #3b82f6;
+            /* ដូរខ្សែបន្ទាត់ឱ្យភ្លឺជាងមុន */
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        /* កែប្រែពណ៌កាត Premium (កាតកណ្តាល) កុំឱ្យមានផ្ទៃពណ៌សដែរ */
+        .plan-card.premium {
+            /* ឱ្យវាដិតពណ៌ខៀវជាងគេបន្តិច ដើម្បីឱ្យលេចធ្លោ */
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid #2563eb;
+            /* ខ្សែបន្ទាត់ពណ៌ខៀវដិត */
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0ea5e9;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Card Typography Elements */
+        .plan-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+
+        /* Features list inside the cards */
+        .plan-features {
+            list-style: none;
+            margin: 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .plan-features li {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Decorated Card Buttons */
+        .choose-btn {
+            background-color: #1e293b;
+            /* ពណ៌ប្រអប់ប៊ូតុងងងឹតស្រាល */
+            border: 1px solid #334155;
+            color: #3b82f6;
+            /* អក្សរពណ៌ខៀវភ្លឺ */
+            padding: 14px 0;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .choose-btn:hover {
+            background-color: #2563eb;
+            /* ពេលដាក់ម៉ៅស៍ពីលើ ឱ្យឡើងពណ៌ខៀវដិត */
+            color: #ffffff;
+            /* អក្សរដូរជាពណ៌ស */
+            border-color: #2563eb;
+        }
+
+        /* Primary action button style for main choice */
+        .premium .choose-btn {
+            background-color: #0ea5e9;
+            color: white;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+        }
+
+        .premium .choose-btn:hover {
+            background-color: #0284c7;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0284c7;
+        }
+
+        /* Decorated Footer Layout */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #111827;
+            /* ពណ៌ខ្មៅស្រាលដូចក្បាលទំព័រ (Header) */
+            margin: 40px 0 0 0;
+            /* យក Margin ឆ្វេងស្តាំចេញ ឱ្យវាជាប់គែមស្អាត */
+            border-top: 1px solid #1e293b;
+            /* ខ្សែបន្ទាត់ស្តើងខាងលើពណ៌ខៀវក្រម៉ៅ */
+            font-size: 0.9rem;
+            color: #6b7280;
+            /* អក្សរពណ៌ប្រផេះក្រម៉ៅស្រទន់ មិនចាំងភ្នែក */
+            box-shadow: none;
+            /* លុបស្រមោលចាស់ចោល */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="Menu">
+        <div class="company-name">
+            <img class="logo" src="/Resource/ChatGPT Image Jul 2, 2026, 08_42_33 PM.png" height="100px" alt="Logo">
+            <h1>PrimeCloud</h1>
+        </div>
+        <nav>
+            <div>
+                <a href="/Home.html">Home</a>
+                <a href="/Feature.html">Features</a>
+                <a href="/Service.html">Service Plan</a>
+                <a href="/Check_Out_Default.html">Check Out</a>
+                <a href="/About_Us.html">About Us</a>
+                <button class="btn-sm">Login</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Service Plans Grid -->
+    <main>
+        <!-- Basic Plan -->
+        <section class="plan-card">
+            <div class="plan-header">
+                <h2 class="plan-title">Basic Plan</h2>
+                <div class="plan-price">$5<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+                <li>1 vCPU</li>
+                <li>1 GB RAM</li>
+                <li>25 GB SSD</li>
+                <li>1 TB Bandwidth</li>
+            </ul>
+            <button class="choose-btn"><a href="/Check_Out_Basic.html">Choose Plan</a></button>
+        </section>
+
+        <!-- Premium Plan -->
+        <section class="plan-card premium">
+            <div class="badge">Most Popular</div>
+            <div class="plan-header">
+                <h2 class="plan-title">Premium Plan</h2>
+                <div class="plan-price">$20<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+                <li>4 vCPU</li>
+                <li>8 GB RAM</li>
+                <li>100 GB SSD</li>
+                <li>5 TB Bandwidth</li>
+            </ul>
+            <button class="choose-btn"><a href="/Check_Out_premium.html">Choose Plan</a></button>
+        </section>
+
+        <!-- Stand Plan -->
+        <section class="plan-card">
+            <div class="plan-header">
+                <h2 class="plan-title">Standard Plan</h2>
+                <div class="plan-price">$30<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+                <li> 4 vCPU</li>
+                <li>8 GB RAM</li>
+                <li>100 GB SSD</li>
+                <li>Unlimited Traffic</li>
+                <li>Dedicated Resources</li>
+                <li>Premium Support</li>
+                <li>SLA Guarantee</li>
+            </ul>
+            <button class="choose-btn"><a href="/Check_Out_standard.html">Choose Plan</a></button>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2026 PrimeCloud</p>
+    </footer>
+
+</body>
+
+</html>

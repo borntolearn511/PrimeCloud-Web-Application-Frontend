@@ -1,0 +1,66 @@
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1220;
+            color: rgb(255, 255, 255);
+        }
+
+        .Menu nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            margin-left: 70px;
+        }
+
+        .Menu a {
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: rgb(134, 134, 134);
+        }
+
+        .company-name {
+            display: flex;
+            padding-top: 20px;
+        }
+
+        .Menu {
+            display: flex;
+            justify-content: center;
+            padding: 5px 40px;
+            background: #ffffff0d;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .Menu nav a {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #ffffff0d;
+        }
+
+        .btn-sm {
+            background-color: #2563EB;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            font-size: 20px;
+            margin-left: 80px;
+        }
+
+        .btn-sm:hover {
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: white;
+        }

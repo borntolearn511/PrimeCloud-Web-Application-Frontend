@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PrimeCloud.io</title>
+    <style>
+        /* --- Main Content Section --- */
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .page-title {
+            margin-bottom: 40px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        /* --- Features Grid Container --- */
+        .container {
+            padding: 20px;
+        }
+
+        .feature-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+            width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            color: #2563EB;
+            margin-bottom: 15px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card-content p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #ffffff0d;
+            margin-top: auto;
+        }
+
+        .test {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="Menu">
+        <div class="company-name">
+            <img class="logo" src="/Resource/ChatGPT Image Jul 2, 2026, 08_42_33 PM.png" height="100px" alt="Logo">
+            <h1>PrimeCloud</h1>
+        </div>
+        <nav>
+            <div>
+                <a href="/Home.html">Home</a>
+                <a href="/Feature.html">Features</a>
+                <a href="/Service.html">Service Plan</a>
+                <a href="/Check_Out_Default.html">Check Out</a>
+                <a href="/About_Us.html">About Us</a>
+                <button class="btn-sm">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Our Feature</h1>
+
+        <div class="features-container">
+            <div class="container">
+                <div class="feature-card">
+                    <div class="card-icon icon-cloud">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>☁️ High Availability</h3>
+                        <p>99.99% uptime guarantee</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon icon-lock">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>🔒 Enterprise Security</h3>
+                        <p>DDoS protection and encrypted storage</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon icon-bolt">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>⚡Fast Performance</h3>
+                        <p>NVMe SSD and global CDN</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon icon-chart">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>📈 Auto Scaling</h3>
+                        <p>Resources grow with your business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 PrimeCloud</p>
+    </footer>
+
+</body>
+
+</html>

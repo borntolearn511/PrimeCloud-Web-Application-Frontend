@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PrimeCloud.io</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #0b111e;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+
+        .sign-in-btn {
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #0ea5e9;
+            background-color: transparent;
+            padding: 10px 24px;
+            border-radius: 8px;
+            border: 1px solid #0ea5e9;
+            transition: all 0.2s ease;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #0ea5e9;
+            color: #ffffff;
+        }
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .hero-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0284c7;
+        }
+
+        .btn-secondary {
+            background-color: #1e293b;
+            color: #3b82f6;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid #334155;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-box {
+            background: linear-gradient(180deg, #16223f 0%, #0f172a 100%);
+            border: 1px solid #1e3a8a;
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .feature-box p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+        .test{
+            border: 2px solid red ;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="Menu">
+        <div class="company-name">
+            <img class="logo" src="/Resource/ChatGPT Image Jul 2, 2026, 08_42_33 PM.png" height="100px" alt="Logo">
+            <h1>PrimeCloud</h1>
+        </div>
+        <nav>
+            <div>
+                <a href="/Home.html">Home</a>
+                <a href="/Feature.html">Features</a>
+                <a href="/Service.html">Service Plan</a>
+                <a href="/Check_Out_Default.html">Check Out</a>
+                <a href="/About_Us.html">About Us</a>
+                <button class="btn-sm">Login</button>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <main>
+            <section class="hero-section">
+                <h1>Welcome to PrimeCloud</h1>
+                <p>Secure, lightning-fast, and scalable cloud solutions tailored for your business. Store your data with
+                    maximum protection and access it effortlessly from anywhere in the world.</p>
+                <div class="cta-buttons">
+                    <a href="/Service.html" class="btn-primary">View Pricing Plans</a>
+                    <a href="/About_Us.html" class="btn-secondary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- ផ្នែកបង្ហាញពីចំណុចខ្លាំងរបស់ក្រុមហ៊ុន (Features Overview) -->
+            <section class="features-grid">
+
+                <!-- កាតពិសេសទី ១ -->
+                <div class="feature-box">
+                    <span class="feature-icon">⚡</span>
+                    <h3>High Speed Performance</h3>
+                    <p>Experience ultra-fast loading times and real-time synchronization with our next-generation SSD
+                        cloud architecture.</p>
+                </div>
+
+                <!-- កាតពិសេសទី ២ -->
+                <div class="feature-box">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Bank-Grade Security</h3>
+                    <p>Your data security is our priority. We offer end-to-end encryption, regular auto-backups, and
+                        advanced firewall filters.</p>
+                </div>
+
+                <!-- កាតពិសេសទី ៣ -->
+                <div class="feature-box">
+                    <span class="feature-icon">🤝</span>
+                    <h3>24/7 Premium Support</h3>
+                    <p>Our expert team is always online to assist you with any technical needs, ensuring your system
+                        runs smoothly at all hours.</p>
+                </div>
+
+            </section>
+
+        </main>
+    </section>
+    <footer>
+        <p>© 2026 PrimeCloud</p>
+    </footer>
+
+</body>
+
+</html>

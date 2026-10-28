@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PrimeCloud.io</title>
+    <style>
+        :root {
+            --Secondary: #0F172A;
+            --Accent: #06B6D4;
+            --Background: rgb(58, 128, 185);
+            /* Background */
+            --bg: #060B1A;
+            --bg-secondary: #0A1022;
+
+            /* Cards */
+            --card: #14203f;
+            --card-hover: #304686;
+
+            /* Border */
+            --border: rgba(255, 255, 255, .18);
+
+            /* Primary */
+            --primary: #2563EB;
+            --primary-hover: #3B82F6;
+            /* Text */
+            --white: #FFFFFF;
+            --text: #A9B4D0;
+        }
+
+        .menu {
+            width: 800px;
+            height: 16px;
+            float: left;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: light;
+            transition: 0.4s ease;
+        }
+
+        .btn-sm {
+            transition: .25s ease;
+        }
+
+        .btn-sm:hover {
+            background-color: var(--card-hover);
+            color: #d4d8ee;
+            box-shadow: 0 0 10px rgba(37, 100, 235, 0.418);
+        }
+
+        .Card {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .Card h2 {
+            color: white;
+            font-size: 40px;
+            padding-top: 0px;
+            margin-bottom: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 2fr);
+
+            gap: 25px;
+        }
+
+        .feature-card {
+
+            background: radial-gradient(farthest-corner at 100px 100px,
+                    var(--card-hover),
+                    var(--card));
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border: 2px solid rgba(255, 255, 255, .12);
+
+            transition: .3s ease;
+
+            color: white;
+        }
+
+        .feature-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 0 25px rgba(37, 99, 235, .35);
+        }
+
+        .feature-card h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+
+            color: var(--text);
+
+            line-height: 1.6;
+        }
+
+        .feature-card:last-child {
+            grid-column: 1 / 4;
+            justify-self: center;
+            max-width: 400px;
+        }
+
+        .btn-7 {
+            width: 100px;
+            background-color: #2563EB;
+            padding: 10px 20px;
+            padding-top: 10px;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            font-size: 20px;
+            transition: .3s ease-in-out;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 0 0 30px rgba(37, 100, 235, 0.418);
+
+        }
+
+        .btn-7:hover {
+            cursor: pointer;
+            background-color: var(--card-hover);
+            color: #d4d8ee;
+        }
+
+        .text {
+            text-align: center;
+            font-size: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="Menu">
+        <div class="company-name">
+            <img class="logo" src="/Resource/ChatGPT Image Jul 2, 2026, 08_42_33 PM.png" height="100" alt="Logo">
+            <h1>PrimeCloud</h1>
+        </div>
+        <nav>
+            <div>
+                <a href="/Home.html">Home</a>
+                <a href="/Feature.html">Features</a>
+                <a href="/Service.html">Service Plan</a>
+                <a href="/Check_Out_Default.html">Check Out</a>
+                <a href="/About_Us.html">About Us</a>
+                <button class="btn-sm">Login</button>
+            </div>
+        </nav>
+    </header>
+    <section class="Card">
+        <div class="text">
+            <p><strong>About Us</strong></p>
+        </div>
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>👍About PrimeCloud</h3>
+                <p>PrimeCloud is a cloud computing provider dedicated to delivering secure, scalable, and
+                    high-performance infrastructure for businesses, developers, and startups. Our mission is to make
+                    cloud technology accessible, reliable, and easy to use.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🚩Our Mission</h3>
+                <p>To empower businesses of all sizes with reliable cloud infrastructure that enables innovation,
+                    growth, and digital transformation.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>👁️👁️Our Vision</h3>
+                <p>To become a trusted global cloud platform known for security, performance, and customer success.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚖️Core Values</h3>
+                <p>Value Description 🔒 Security Protecting customer data with industry best practices. ⚡ Performance
+                    Delivering fast, reliable cloud services. 💡 Innovation Continuously improving our platform and
+                    services. 🤝 Customer First Providing responsive support and putting customers' needs first. </p>
+            </div>
+            <div class="feature-card">
+                <h3>🫴What We Offer?</h3>
+                <p>A Virtual Private Cloud (VPC) is like a private office building in the cloud. Inside that building,
+                    you can place your virtual servers, databases, and applications, while controlling who can enter and
+                    how they communicate. This makes VPCs a fundamental building block for securely deploying cloud
+                    applications.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⁉️Why choose Us?</h3>
+                <p>99.99% uptime target High-performance SSD/NVMe storage Multiple data center regions Transparent
+                    pricing 24/7 technical support Automated backups Strong security practices</p>
+            </div>
+
+            <div class="feature-card last child">
+                <h3>😊Ready To Get Start?</h3>
+                <p>Deploy your first cloud server in minutes and experience secure, scalable infrastructure designed for
+                    modern applications.</p>
+                <div class="btn-7">Contact Us</div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 PrimeCloud</p>
+    </footer>
+</body>
+
+</html>
